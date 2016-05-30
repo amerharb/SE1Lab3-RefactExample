@@ -32,8 +32,8 @@ public class ShapePanel extends JPanel
         erase = false;
         Point p = sh.getPoint();
         s = sh.getId();
-        postionX = p.x;
-        postionY = p.y;
+        postionX = p.getX();
+        postionY = p.getY();
         size = sh.getSize();
         isCircle = s.equals("C");
         this.repaint();
