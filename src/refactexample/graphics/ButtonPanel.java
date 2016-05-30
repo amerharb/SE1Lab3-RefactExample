@@ -22,7 +22,7 @@ public class ButtonPanel extends JPanel
     public ButtonPanel(Controller controller)
     {
         this.controller = controller;
-        ButtonListener buttonListener = new ButtonListener();
+        ButtonListener buttonListener = new ButtonListener(this);
         setButtons(buttonListener);
     }
 
@@ -42,17 +42,4 @@ public class ButtonPanel extends JPanel
         quitButton.addActionListener(buttonListener);
     }
 
-    private class ButtonListener implements ActionListener
-    {
-
-        private ButtonListener()
-        {
-            super();
-        }
-
-        public void actionPerformed(ActionEvent e)
-        {
-            controller.paintShape(e.getActionCommand());
-        }
-    }
 }
