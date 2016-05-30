@@ -29,9 +29,9 @@ public class ButtonPanel extends JPanel
         JButton circleButton = new JButton("CIRCLE");
         add(circleButton);
         circleButton.addActionListener(buttonListener);
-        JButton blankButton = new JButton("BLANK");
-        add(blankButton);
-        blankButton.addActionListener(buttonListener);
+        JButton eraseButton = new JButton("ERASE");
+        add(eraseButton);
+        eraseButton.addActionListener(buttonListener);
         JButton quitButton = new JButton("QUIT");
         add(quitButton);
         quitButton.addActionListener(buttonListener);

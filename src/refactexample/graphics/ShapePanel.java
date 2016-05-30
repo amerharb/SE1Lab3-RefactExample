@@ -21,7 +21,7 @@ public class ShapePanel extends JPanel
     int postionY = 0;
     int size = 0;
     boolean isCircle = false;
-    boolean blank = true;
+    boolean erase = true;
 
     public ShapePanel()
     {
@@ -29,7 +29,7 @@ public class ShapePanel extends JPanel
 
     public void paintShape(Shape sh)
     {
-        blank = false;
+        erase = false;
         Point p = sh.getPoint();
         s = sh.getId();
         postionX = p.x;
@@ -39,9 +39,9 @@ public class ShapePanel extends JPanel
         this.repaint();
     }
 
-    public void blank()
+    public void erase()
     {
-        blank = true;
+        erase = true;
         this.repaint();
     }
 
@@ -49,7 +49,7 @@ public class ShapePanel extends JPanel
     {
         g.setColor(Color.white);
         g.fillRect(0, 0, 500, 400);
-        if (!blank) {
+        if (!erase) {
             g.setColor(Color.black);
             g.drawString(s, 10, 10);
             if (isCircle) {

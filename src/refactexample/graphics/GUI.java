@@ -38,8 +38,8 @@ public class GUI extends JFrame
         myShapePanel.paintShape(sh);
     }
 
-    public void blank()
+    public void erase()
     {
-        myShapePanel.blank();
+        myShapePanel.erase();
     }
 }
