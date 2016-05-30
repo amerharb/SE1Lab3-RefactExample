@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package refactexample.graphics;
 
 import javax.swing.*;
@@ -15,12 +14,14 @@ import refactexample.Controller;
  *
  * @author admin
  */
-public class ButtonPanel extends JPanel { 
+public class ButtonPanel extends JPanel
+{
 
     Controller controller;
 
-    public ButtonPanel(Controller controller) {
-        this.controller=controller;
+    public ButtonPanel(Controller controller)
+    {
+        this.controller = controller;
         ButtonListener buttonListener = new ButtonListener();
         JButton squareButton = new JButton("SQUARE");
         add(squareButton);
@@ -36,16 +37,17 @@ public class ButtonPanel extends JPanel {
         quitButton.addActionListener(buttonListener);
     }
 
+    private class ButtonListener implements ActionListener
+    {
 
-    private class ButtonListener implements ActionListener {
+        private ButtonListener()
+        {
+            super();
+        }
 
-
-    private ButtonListener() {
-        super();
+        public void actionPerformed(ActionEvent e)
+        {
+            controller.paintShape(e.getActionCommand());
+        }
     }
-
-    public void actionPerformed(ActionEvent e) {
-        controller.paintShape(e.getActionCommand());
-    }
-  }
 }
