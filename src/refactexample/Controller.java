@@ -12,23 +12,23 @@ import refactexample.shapes.*;
  * @author admin
  */
 public class Controller {
-    GUI g;
+    GUI myGUI;
 
     public Controller() {
         
     }
 
     public void startUp(){
-        g=new GUI(this);
+        myGUI=new GUI(this);
     }
 
     public void paintShape(String command) {
         if (command.equals("CIRCLE"))
-            g.paintShape(new Circle(100, new Point(200,100)));
+            myGUI.paintShape(new Circle(100, new Point(200,100)));
         else if (command.equals("SQUARE"))
-            g.paintShape(new Square(100, new Point(200,100)));
+            myGUI.paintShape(new Square(100, new Point(200,100)));
         else if (command.equals("BLANK"))
-            g.blank();
+            myGUI.blank();
         else if (command.equals("QUIT"))
             System.exit(0);
     }
