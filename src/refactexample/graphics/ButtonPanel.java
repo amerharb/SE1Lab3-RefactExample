@@ -23,6 +23,11 @@ public class ButtonPanel extends JPanel
     {
         this.controller = controller;
         ButtonListener buttonListener = new ButtonListener();
+        setButtons(buttonListener);
+    }
+
+    private void setButtons(ButtonListener buttonListener)
+    {
         JButton squareButton = new JButton("SQUARE");
         add(squareButton);
         squareButton.addActionListener(buttonListener);
