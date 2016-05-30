@@ -16,8 +16,8 @@ import refactexample.shapes.Point;
  */
 public class ShapePanel extends JPanel {
    String s="";
-   int x=0;
-   int y=0;
+   int postionX=0;
+   int postionY=0;
    int size=0;
    boolean isCircle=false;
    boolean blank=true;
@@ -29,8 +29,8 @@ public class ShapePanel extends JPanel {
        blank=false;
        Point p=sh.getPoint();
        s=sh.getId();
-       x=p.x;
-       y=p.y;
+       postionX=p.x;
+       postionY=p.y;
        size=sh.getSize();
        isCircle = s.equals("C");
        this.repaint();
@@ -49,9 +49,9 @@ public class ShapePanel extends JPanel {
             g.setColor(Color.black);
             g.drawString(s, 10, 10);
             if (isCircle)
-                g.drawOval(x, y, size, size);
+                g.drawOval(postionX, postionY, size, size);
             else
-                g.drawRect(x, y, size, size);
+                g.drawRect(postionX, postionY, size, size);
             g.setColor(Color.white);
         }
    }
