@@ -1,0 +1,62 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package refactexample.graphics;
+
+import javax.swing.*;
+import java.awt.*;
+import refactexample.shapes.Shape;
+import refactexample.shapes.Point;
+
+/**
+ *
+ * @author admin
+ */
+public class ShapePanel extends JPanel {
+   String s="";
+   int x=0;
+   int y=0;
+   int size=0;
+   boolean isCircle=false;
+   boolean blank=true;
+
+   public ShapePanel() {
+   }
+
+   public void paintShape(Shape sh) {
+       blank=false;
+       Point p=sh.getPoint();
+       s=sh.getId();
+       x=p.x;
+       y=p.y;
+       size=sh.getSize();
+       isCircle = s.equals("C");
+       this.repaint();
+   }
+
+   public void blank() {
+       blank=true;
+       this.repaint();
+   }
+
+
+   public void paintComponent(Graphics g) {
+	g.setColor(Color.white);
+	g.fillRect(0, 0, 500, 400);
+        if (!blank) {
+            g.setColor(Color.black);
+            g.drawString(s, 10, 10);
+            if (isCircle)
+                g.drawOval(x, y, size, size);
+            else
+                g.drawRect(x, y, size, size);
+            g.setColor(Color.white);
+        }
+   }
+
+
+
+
+}
