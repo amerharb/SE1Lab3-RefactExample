@@ -12,14 +12,14 @@ import refactexample.shapes.*;
  * @author admin
  */
 public class Controller {
-    GraphicalThings g;
+    GUI g;
 
     public Controller() {
         
     }
 
     public void startUp(){
-        g=new GraphicalThings(this);
+        g=new GUI(this);
     }
 
     public void paintShape(String command) {

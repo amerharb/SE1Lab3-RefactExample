@@ -13,13 +13,13 @@ import refactexample.Controller;
  *
  * @author admin
  */
-public class GraphicalThings extends JFrame
+public class GUI extends JFrame
 {
 
     ShapePanel myShapePanel;
     ButtonPanel myButtonPanel;
 
-    public GraphicalThings(Controller controller)
+    public GUI(Controller controller)
     {
         super();
         myShapePanel = new ShapePanel();
