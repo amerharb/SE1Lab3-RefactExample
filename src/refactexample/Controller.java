@@ -27,7 +27,7 @@ public class Controller {
             myGUI.paintShape(new Circle(100, new Point(200,100)));
         else if (command.equals("SQUARE"))
             myGUI.paintShape(new Square(100, new Point(200,100)));
-        else if (command.equals("BLANK"))
+        else if (command.equals("ERASE"))
             myGUI.erase();
         else if (command.equals("QUIT"))
             System.exit(0);
