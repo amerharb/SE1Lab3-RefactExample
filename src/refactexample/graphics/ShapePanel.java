@@ -7,7 +7,6 @@ package refactexample.graphics;
 import javax.swing.*;
 import java.awt.*;
 import refactexample.shapes.Shape;
-import refactexample.shapes.Point;
 
 /**
  *
