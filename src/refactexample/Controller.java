@@ -5,7 +5,7 @@
 
 package refactexample;
 
-import refactexample.graphics.Point;
+import refactexample.shapes.Point;
 import refactexample.graphics.*;
 import refactexample.shapes.*;
 /**

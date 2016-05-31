@@ -4,6 +4,7 @@
  */
 package refactexample.graphics;
 
+import refactexample.shapes.Point;
 import javax.swing.*;
 import java.awt.*;
 import refactexample.shapes.Shape;

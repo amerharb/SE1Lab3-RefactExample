@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package refactexample.graphics;
+package refactexample.shapes;
 
 import java.beans.PropertyChangeSupport;
 

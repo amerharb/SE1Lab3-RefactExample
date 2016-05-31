@@ -5,8 +5,6 @@
 
 package refactexample.shapes;
 
-import refactexample.graphics.Point;
-
 /**
  *
  * @author admin
