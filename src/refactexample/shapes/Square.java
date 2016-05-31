@@ -11,6 +11,8 @@ package refactexample.shapes;
 public class Square extends Shape
 {
 
+    String Id;
+
     public Square(int size, Point p)
     {
         super(size, p);

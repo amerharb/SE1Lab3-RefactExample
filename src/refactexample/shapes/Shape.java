@@ -2,27 +2,31 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package refactexample.shapes;
 
 /**
  *
  * @author admin
  */
-public abstract class Shape {
+public abstract class Shape
+{
+
     int size;
     Point p;
-    String Id;
-    public Shape(int size, Point p) {
-        this.size=size;
-        this.p=p;
+
+    public Shape(int size, Point p)
+    {
+        this.size = size;
+        this.p = p;
     }
 
-    public int getSize() {
+    public int getSize()
+    {
         return size;
     }
 
-    public Point getPoint(){
+    public Point getPoint()
+    {
         return p;
     }
 

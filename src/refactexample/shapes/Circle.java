@@ -2,22 +2,24 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package refactexample.shapes;
 
 /**
  *
  * @author admin
  */
-public class Circle extends Shape {
+public class Circle extends Shape
+{
 
+    String Id;
 
-
-    public Circle(int size, Point p) {
+    public Circle(int size, Point p)
+    {
         super(size, p);
     }
 
-    public String getId() {
+    public String getId()
+    {
         return "C";
     }
 }
