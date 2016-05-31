@@ -10,20 +10,15 @@
 <project name="RefactExample" default="default" basedir=".">
     <description>Builds, tests, and runs the project RefactExample.</description>
     <import file="nbproject/build-impl.xml"/> 
-	
-    <target name="-pre-compile" description="first target test">
-		<echo message="BEFORE COMPILING"/>
+		
+	<target name="-pre-init" description = "Forth target test" >
+		<echo message="CREATE TEMP DIR" />
+		<mkdir dir="TEMP" />
 	</target>
-	
-	<target name="-post-compile" description="second target test">
-		<echo message="AFTER COMPILING"/>
-	</target>
-
-	<target name="-post-jar"
-		description="third target test">
-		<mkdir dir="TEMP"/>
-	</target>
-	
+	<target name="-post-jar" description = "Fifth test" >
+		<echo message="DELETE TEMP DIR" />
+		<delete dir="TEMP" />
+	</target>	
 	<!--
     There exist several targets which are by default empty and which can be 
     used for execution of your tasks. These targets are usually executed 
@@ -83,9 +78,5 @@
     properties which you can use, check the target you are overriding in the
     nbproject/build-impl.xml file. 
     -->
-
-
-
-
 
 </project>
