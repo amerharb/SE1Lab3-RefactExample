@@ -12,6 +12,7 @@ package refactexample.shapes;
 public abstract class Shape {
     int size;
     Point p;
+    String Id;
     public Shape(int size, Point p) {
         this.size=size;
         this.p=p;
